@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Congredu</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="" />
+      <!-- css -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link href="plugins/flexslider/flexslider.css" rel="stylesheet" media="screen" />
+      <link href="css/cubeportfolio.min.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
+
+      <!-- Theme skin -->
+      <link id="t-colors" href="skins/default.css" rel="stylesheet" />
+
+      <!-- Libraries CSS Files -->
+      <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="lib/animate/animate.min.css" rel="stylesheet">
+      <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+      <!-- Main Stylesheet File -->
+      <link href="css/style1.css" rel="stylesheet">
+
+      <!-- boxed bg -->
+      <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+      <div id="wrapper">
+      		<!-- start header -->
+          <header>
+            <div class="navbar navbar-default navbar-static-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                  <a class="navbar-brand" href="/"><img src="img/logo.png" alt="" width="180" height="75" /></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                  <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                      <a href="/" class="dropdown-toggle ">Página Inicial </a>
+
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">O Evento <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/sobre">Sobre</a></li>
+                        <li><a href="/comissoes">Comissões</a></li>
+                      </ul>
+                    </li>
+
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Inscrições <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/normas-de-inscricoes">Normas</a></li>
+                        <li><a href="/cadastro">Formulário de inscrição</a></li>
+                      </ul>
+                    </li>
+
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Trabalhos <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/normasanais">Normas para anais</a></li>
+                        <li><a href="/normasebook">Normas para e-books</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="/programacao" class="dropdown-toggle ">Programação</a>
+                    </li>
+
+                    <li class="dropdown"><a href="/contato" class="dropdown-toggle ">Contato</a>
+                    </li>
+
+                    <table class="navbar navbar-default navbar-static-top" style="border: none;">
+                      <tr>
+                        <td>
+                          <div id="entrar" >
+                            <form class="" action="/entrar" method="post">
+                              <li class="dropdown"><input type="submit" value="Entrar" class="dropdown-toggle">
+                              </li>
+                            </form>
+                          </div>
+                        </td>
+                        <td>
+                          <div hidden id="log">
+                            <form class="" action="/logado" method="post">
+                              <li class="dropdown"><input type="submit" value="Perfil" class="dropdown-toggle">
+                              </li>
+                            </form>
+                          </div>
+                        </td>
+                        <td>
+                          <div hidden id="out">
+                            <form class="" action="/deslogado" method="post">
+                              <li class="dropdown"><input type="submit" value="Sair" class="dropdown-toggle">
+                              </li>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <script type="text/javascript">
+                      {{#if logado}}
+                        document.getElementById("log").hidden = false;
+                        document.getElementById("out").hidden = false;
+                        document.getElementById("entrar").hidden = true;
+                      {{else}}
+                        document.getElementById("log").hidden = true;
+                        document.getElementById("out").hidden = true;
+                        document.getElementById("entrar").hidden = false;
+                      {{/if}}
+                    </script>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          {{{body}}}
+
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 col-lg-3">
+                  <div class="widget">
+                    <h4>Entre em contato conosco - Congredu</h4>
+                    <p>
+                      <i class="icon-phone"></i><b>Telefone: </b> 83. 3322-3222 - Secretaria do evento <br>
+                      <i class="icon-envelope-alt"></i> <b>e-mail: </b> contato@congredu.com.br <br>
+                      <i class="icon-envelope-alt"><b> Atendimento: </b>segunda a sexta (08:00 às 12:00 e de 13:00 às 17:00) (sábado e domingo - fechado)</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                  <div class="widget">
+                    <h4>Acesso rápido</h4>
+                    <ul class="link-list">
+                        <li><a href="/login">Entrar</a></li>
+                      <li><a href="/cadastro">Inscreva-se</a></li>
+                      <li><a href="/sobre">Sobre o evento</a></li>
+                      <li><a href="/inscricoes">Normas de inscrição</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                  <div class="widget">
+                    <h4>Localização</h4>
+                    <ul class="link-list">
+                      <li><a href="/contato">Cidade do evento: Fortaleza - CE</a></li>
+                      <li><a href="/contato">Local do evento: Centro de Eventos do Ceará</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                  <div class="widget">
+                    <h4>Indique o VI Congredu a um(a) amigo(a).</h4>
+                    <p>Digite o e-mail do(a) amigo(a) e envie divulgação automática.</p>
+                    <div class="form-group multiple-form-group input-group">
+                      <input type="email" name="email" class="form-control">
+                      <span class="input-group-btn">
+                                  <button id="okButton" type="button" class="btn btn-theme btn-add">Enviar</button>
+                              </span>
+                    </div>
+                    <span hidden id="msg" style="color:green">E-mail enviado com sucesso!</span>
+
+                    <script>
+                        document.getElementById("okButton").addEventListener("click", function() {
+                            document.getElementById("msg").hidden = false;
+                        }, true);
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="sub-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="copyright">
+                      <p>© Copyright 2019 | Todos os direitos reservados</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul class="social-network">
+                      <li><a href="https://www.facebook.com/congreduu" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://twitter.com/hashtag/congredu" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="https://www.instagram.com/congredu.oficial/?hl=pt-br" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="https://www.youtube.com/watch?v=9w3r5WX19e8" data-placement="top" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+    </body>
+
+</html>

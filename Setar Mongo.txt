@@ -1,0 +1,5 @@
+
+
+For windows - just go to Mongodb folder (ex : C:\ProgramFiles\MongoDB\Server\3.4\bin) and open cmd in the folder and type "mongod.exe --dbpath c:\data\db"
+
+if c:\data\db folder doesn't exist then create it by yourself and run above command again.

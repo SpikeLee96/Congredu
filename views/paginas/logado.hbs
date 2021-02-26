@@ -1,0 +1,29 @@
+<style media="screen">
+  .subtitulo{
+    font-size: 16px;
+    font-family: Impact, Charcoal, sans-serif;
+  }
+  td, th{
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+  }
+  h3 {
+    text-shadow: 3px 3px 3px red;
+    color: black;
+    font-size: 26px;
+    font-family: 'Berkshire Swash';
+  }
+  a{
+    color: black;
+    text-shadow: 3px 3px 3px white;
+  }
+</style>
+
+<div align="center">
+  <br>
+  {{#each usuario}}
+    <h5 style="color: red; font-weight: bolder;">Editar dados <a href="/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a></h5>
+    <h5 style="color: red; font-weight: bolder;">Deletar conta <a href="/delete/{{this._id}}" onclick="return confirm('Você confirma a exclusão deste usuário?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></h5>
+  {{/each}}
+</div>

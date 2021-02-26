@@ -1,0 +1,53 @@
+<style media="screen">
+  .subtitulo{
+    font-size: 16px;
+    font-family: Impact, Charcoal, sans-serif;
+  }
+  td, th{
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+  }
+  h3 {
+    text-shadow: 3px 3px 3px red;
+    color: black;
+    font-size: 26px;
+    font-family: 'Berkshire Swash';
+  }
+  a{
+    color: black;
+    text-shadow: 3px 3px 3px white;
+  }
+</style>
+
+<div align="left">
+</div>
+<h3> Lista de Usuários </h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td class="subtitulo">&nbsp;&nbsp;Nome&nbsp;&nbsp;</td>
+            <td class="subtitulo">&nbsp;&nbsp;Sobrenome&nbsp;&nbsp;</td>
+            <td class="subtitulo">&nbsp;&nbsp;Apelido&nbsp;&nbsp;</td>
+            <td class="subtitulo">&nbsp;&nbsp;Email&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;Editar&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;Deletar&nbsp;&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>&nbsp;&nbsp;{{this.username}}&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;{{this.surname}}&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;{{this.nickname}}&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;{{this.email}}&nbsp;&nbsp;</td>
+            <td>
+                <a href="/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+            </td>
+            <td>
+              <a href="/delete/{{this._id}}" onclick="return confirm('Você confirma a exclusão deste usuário?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
