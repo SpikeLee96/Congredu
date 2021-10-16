@@ -1,5 +1,6 @@
 # Congredu
-Protótipo de site educacional utilizando Node.JS
+Protótipo de site educacional utilizando Node.JS.
+Esse site contém CRUD de usuários, sessão login (não finalizado), conteúdo informativo, e templates do bootstrap.
 
 Para iniciar aplicação primeiramente instale o Node e o mongoDB:
 https://nodejs.org/en/download/
